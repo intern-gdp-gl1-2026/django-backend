@@ -11,5 +11,8 @@ class Vehicle(models.Model):
     is_available = models.BooleanField(default=True)
     location = models.CharField(max_length=50)
 
+    class Meta:
+        db_table = "vehicles"
+
     def __str__(self):
         return self.name

@@ -29,6 +29,8 @@ class Reservation(models.Model):
     )
 
     class Meta:
+        db_table = "reservations"
+
         indexes = [
             models.Index(fields=['vehicle', 'start_date', 'end_date']),
         ]

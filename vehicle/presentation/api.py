@@ -1,14 +1,16 @@
 from datetime import date
 from typing import List
 from ninja import Router, Query
-from vehicle.schemas import (
+from ninja.errors import HttpError
+from vehicle.presentation.schemas import (
     VehicleResponse,
     AvailableVehicleResponse,
     CreateVehicleRequest,
     UpdateVehicleRequest,
     MessageResponse
 )
-from vehicle.service import VehicleService
+from vehicle.application.service import VehicleService
+from vehicle.domain.exceptions import VehicleNotFoundError
 
 router = Router(tags=["Vehicles"])
 service = VehicleService()
@@ -27,7 +29,21 @@ def search_available_vehicles(
     Get available vehicles filtered by start_date, end_date, and location
     Returns vehicles that have no conflicting reservations
     """
-    return service.search_available_vehicles(start_date, end_date, location)
+    try:
+        return service.search_available_vehicles(start_date, end_date, location)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HttpError(500, f"Error searching vehicles: {str(e)}")
+
+
+@router.get("/{vehicle_id}", response=VehicleResponse)
+def get_vehicle(request, vehicle_id: int):
+    """Get a specific vehicle by ID"""
+    try:
+        return service.get_vehicle_by_id(vehicle_id)
+    except VehicleNotFoundError as e:
+        raise HttpError(404, str(e))
 
 
 @router.get("/", response=List[VehicleResponse])
@@ -36,18 +52,17 @@ def list_all_vehicles(request):
     return service.get_all_vehicles()
 
 
-@router.get("/{vehicle_id}", response=VehicleResponse)
-def get_vehicle(request, vehicle_id: int):
-    """Get a specific vehicle by ID"""
-    return service.get_vehicle_by_id(vehicle_id)
-
-
 # ========== CREATE ENDPOINT ==========
 
 @router.post("/", response=VehicleResponse)
 def create_vehicle(request, payload: CreateVehicleRequest):
     """Create a new vehicle"""
-    return service.create_vehicle(payload)
+    try:
+        return service.create_vehicle(payload)
+    except Exception as e:
+        import traceback
+        traceback.print_exc()
+        raise HttpError(500, f"Error creating vehicle: {str(e)}")
 
 
 # ========== UPDATE ENDPOINT ==========
@@ -55,7 +70,10 @@ def create_vehicle(request, payload: CreateVehicleRequest):
 @router.put("/{vehicle_id}", response=VehicleResponse)
 def update_vehicle(request, vehicle_id: int, payload: UpdateVehicleRequest):
     """Update a vehicle"""
-    return service.update_vehicle(vehicle_id, payload)
+    try:
+        return service.update_vehicle(vehicle_id, payload)
+    except VehicleNotFoundError as e:
+        raise HttpError(404, str(e))
 
 
 # ========== DELETE ENDPOINT ==========
@@ -63,5 +81,8 @@ def update_vehicle(request, vehicle_id: int, payload: UpdateVehicleRequest):
 @router.delete("/{vehicle_id}", response=MessageResponse)
 def delete_vehicle(request, vehicle_id: int):
     """Delete a vehicle"""
-    message = service.delete_vehicle(vehicle_id)
-    return {"message": message}
+    try:
+        message = service.delete_vehicle(vehicle_id)
+        return {"message": message}
+    except VehicleNotFoundError as e:
+        raise HttpError(404, str(e))
