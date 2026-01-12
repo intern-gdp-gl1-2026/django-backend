@@ -3,13 +3,10 @@ from pathlib import Path
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from django.contrib.auth import get_user_model
 
+from user.models import User
 from reservation.models import Reservation
 from vehicle.models import Vehicle
-
-
-User = get_user_model()
 
 
 class Command(BaseCommand):

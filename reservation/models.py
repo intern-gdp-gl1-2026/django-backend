@@ -1,6 +1,8 @@
 from django.db import models
-from django.conf import settings
+
+from user.models import User
 from vehicle.models import Vehicle
+
 
 class Reservation(models.Model):
     STATUS_CHOICES = [
@@ -10,8 +12,9 @@ class Reservation(models.Model):
         ("completed", "Completed"),
     ]
 
+    # id otomatis dibuat Django sebagai AutoField (integer)
     user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
+        User,
         on_delete=models.CASCADE,
         related_name="reservations"
     )

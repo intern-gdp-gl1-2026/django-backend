@@ -1,13 +1,11 @@
 """
 Main API Configuration
-
-This is where all routers from different domains are combined.
-Each domain (user, vehicle, reservation) has its own router.
 """
 from ninja import NinjaAPI
 
 from user.api import router as user_router
 from vehicle.presentation.api import router as vehicle_router
+from reservation.api import router as reservation_router
 
 # Create the main API instance
 api = NinjaAPI(
@@ -18,14 +16,9 @@ api = NinjaAPI(
 
 # ==================== REGISTER ROUTERS ====================
 
-# User domain endpoints
 api.add_router("/users", user_router)
-
-# Vehicle domain endpoints
 api.add_router("/vehicles", vehicle_router)
-
-# TODO: Add more routers as you implement them
-# api.add_router("/reservations", reservation_router)
+api.add_router("/reservations", reservation_router)
 
 
 # ==================== HEALTH CHECK ====================

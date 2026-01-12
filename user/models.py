@@ -3,16 +3,15 @@ User Model - Simple DDD + Clean Architecture
 """
 from django.db import models
 from django.contrib.auth.hashers import make_password, check_password
-from uuid import uuid4
 
 
 class User(models.Model):
     """
     User Entity - simple models.Model
-    Fields: id, username, password
+    Fields: id (auto), username, password
     """
     
-    id = models.UUIDField(primary_key=True, default=uuid4, editable=False)
+    # id otomatis dibuat Django sebagai AutoField (integer)
     username = models.CharField(max_length=50, unique=True)
     password = models.CharField(max_length=255)
     

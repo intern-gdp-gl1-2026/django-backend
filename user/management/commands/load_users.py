@@ -3,10 +3,8 @@ from pathlib import Path
 
 from django.conf import settings
 from django.core.management.base import BaseCommand
-from django.contrib.auth import get_user_model
 
-
-User = get_user_model()
+from user.models import User
 
 
 class Command(BaseCommand):
@@ -34,10 +32,9 @@ class Command(BaseCommand):
                 )
                 continue
 
-            user = User.objects.create_user(
-                username=username,
-                password=password,
-            )
+            # Use our User.create factory method
+            user = User.create(username=username, password=password)
+            user.save()
             created_count += 1
 
         self.stdout.write(

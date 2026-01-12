@@ -2,7 +2,6 @@
 User Schemas - Request/Response Contracts
 """
 from ninja import Schema
-from uuid import UUID
 
 
 # ========== REQUEST ==========
@@ -20,7 +19,7 @@ class LoginRequest(Schema):
 # ========== RESPONSE ==========
 
 class UserResponse(Schema):
-    id: UUID
+    id: int
     username: str
 
 
