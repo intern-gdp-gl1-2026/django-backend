@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "username": "johndoe",
+    "password": "password123",
+    "date_joined": "2023-01-10T09:15:00",
+    "phone_number": "081234567801",
+    "identity_number": "3174011001900001",
+    "identity_type": "KTP",
+    "address": "Jl. Sudirman No. 10, Jakarta",
+    "date_of_birth": "1990-01-10"
+  },
+  {
+    "id": 2,
+    "username": "janesmith",
+    "password": "password123",
+    "date_joined": "2023-01-12T11:30:00",
+    "phone_number": "081234567802",
+    "identity_number": "3174012002910002",
+    "identity_type": "KTP",
+    "address": "Jl. Thamrin No. 20, Jakarta",
+    "date_of_birth": "1991-02-20"
+  },
+  {
+    "id": 3,
+    "username": "andri",
+    "password": "password123",
+    "date_joined": "2023-02-01T08:45:00",
+    "phone_number": "081234567803",
+    "identity_number": "3273011503880003",
+    "identity_type": "KTP",
+    "address": "Jl. Asia Afrika No. 5, Bandung",
+    "date_of_birth": "1988-03-15"
+  },
+  {
+    "id": 4,
+    "username": "siti",
+    "password": "password123",
+    "date_joined": "2023-02-05T14:10:00",
+    "phone_number": "081234567804",
+    "identity_number": "3273022204920004",
+    "identity_type": "KTP",
+    "address": "Jl. Dago No. 12, Bandung",
+    "date_of_birth": "1992-04-22"
+  },
+  {
+    "id": 5,
+    "username": "budi",
+    "password": "password123",
+    "date_joined": "2023-02-10T10:00:00",
+    "phone_number": "081234567805",
+    "identity_number": "3578010501850005",
+    "identity_type": "KTP",
+    "address": "Jl. Raya Darmo No. 3, Surabaya",
+    "date_of_birth": "1985-01-05"
+  },
+  {
+    "id": 6,
+    "username": "rina",
+    "password": "password123",
+    "date_joined": "2023-02-15T16:20:00",
+    "phone_number": "081234567806",
+    "identity_number": "3578021806900006",
+    "identity_type": "KTP",
+    "address": "Jl. Ahmad Yani No. 7, Surabaya",
+    "date_of_birth": "1990-06-18"
+  },
+  {
+    "id": 7,
+    "username": "agus",
+    "password": "password123",
+    "date_joined": "2023-03-01T09:00:00",
+    "phone_number": "081234567807",
+    "identity_number": "3404011011870007",
+    "identity_type": "KTP",
+    "address": "Jl. Malioboro No. 1, Yogyakarta",
+    "date_of_birth": "1987-11-10"
+  },
+  {
+    "id": 8,
+    "username": "dina",
+    "password": "password123",
+    "date_joined": "2023-03-05T13:45:00",
+    "phone_number": "081234567808",
+    "identity_number": "3404022505930008",
+    "identity_type": "KTP",
+    "address": "Jl. Kaliurang No. 15, Yogyakarta",
+    "date_of_birth": "1993-05-25"
+  },
+  {
+    "id": 9,
+    "username": "rizky",
+    "password": "password123",
+    "date_joined": "2023-03-10T15:00:00",
+    "phone_number": "081234567809",
+    "identity_number": "3174021202890009",
+    "identity_type": "KTP",
+    "address": "Jl. Kemang Raya No. 8, Jakarta",
+    "date_of_birth": "1989-02-12"
+  },
+  {
+    "id": 10,
+    "username": "putri",
+    "password": "password123",
+    "date_joined": "2023-03-15T10:30:00",
+    "phone_number": "081234567810",
+    "identity_number": "3174033009940010",
+    "identity_type": "KTP",
+    "address": "Jl. Tebet Barat No. 4, Jakarta",
+    "date_of_birth": "1994-09-30"
+  },
+  {
+    "id": 11,
+    "username": "fajar",
+    "password": "password123",
+    "date_joined": "2023-04-01T09:10:00",
+    "phone_number": "081234567811",
+    "identity_number": "3273031402860011",
+    "identity_type": "KTP",
+    "address": "Jl. Setiabudi No. 6, Bandung",
+    "date_of_birth": "1986-02-14"
+  },
+  {
+    "id": 12,
+    "username": "nina",
+    "password": "password123",
+    "date_joined": "2023-04-05T14:50:00",
+    "phone_number": "081234567812",
+    "identity_number": "3273042707910012",
+    "identity_type": "KTP",
+    "address": "Jl. Cihampelas No. 9, Bandung",
+    "date_of_birth": "1991-07-27"
+  },
+  {
+    "id": 13,
+    "username": "kevin",
+    "password": "password123",
+    "date_joined": "2023-04-10T11:00:00",
+    "phone_number": "081234567813",
+    "identity_number": "3174040501950013",
+    "identity_type": "KTP",
+    "address": "Jl. Kelapa Gading No. 11, Jakarta",
+    "date_of_birth": "1995-01-05"
+  },
+  {
+    "id": 14,
+    "username": "melisa",
+    "password": "password123",
+    "date_joined": "2023-04-15T16:40:00",
+    "phone_number": "081234567814",
+    "identity_number": "3174051808920014",
+    "identity_type": "KTP",
+    "address": "Jl. Sunter No. 14, Jakarta",
+    "date_of_birth": "1992-08-18"
+  },
+  {
+    "id": 15,
+    "username": "ari",
+    "password": "password123",
+    "date_joined": "2023-05-01T09:25:00",
+    "phone_number": "081234567815",
+    "identity_number": "3578032203840015",
+    "identity_type": "KTP",
+    "address": "Jl. Rungkut No. 2, Surabaya",
+    "date_of_birth": "1984-03-22"
+  },
+  {
+    "id": 16,
+    "username": "lina",
+    "password": "password123",
+    "date_joined": "2023-05-05T12:00:00",
+    "phone_number": "081234567816",
+    "identity_number": "3578040906900016",
+    "identity_type": "KTP",
+    "address": "Jl. Kenjeran No. 18, Surabaya",
+    "date_of_birth": "1990-06-09"
+  },
+  {
+    "id": 17,
+    "username": "bayu",
+    "password": "password123",
+    "date_joined": "2023-05-10T15:35:00",
+    "phone_number": "081234567817",
+    "identity_number": "3404031607880017",
+    "identity_type": "KTP",
+    "address": "Jl. Magelang No. 21, Yogyakarta",
+    "date_of_birth": "1988-07-16"
+  },
+  {
+    "id": 18,
+    "username": "wulan",
+    "password": "password123",
+    "date_joined": "2023-05-15T10:45:00",
+    "phone_number": "081234567818",
+    "identity_number": "3404042909940018",
+    "identity_type": "KTP",
+    "address": "Jl. Solo No. 25, Yogyakarta",
+    "date_of_birth": "1994-09-29"
+  },
+  {
+    "id": 19,
+    "username": "rahmat",
+    "password": "password123",
+    "date_joined": "2023-06-01T09:00:00",
+    "phone_number": "081234567819",
+    "identity_number": "3174060101860019",
+    "identity_type": "KTP",
+    "address": "Jl. Cempaka Putih No. 30, Jakarta",
+    "date_of_birth": "1986-01-01"
+  },
+  {
+    "id": 20,
+    "username": "sarah",
+    "password": "password123",
+    "date_joined": "2023-06-05T13:20:00",
+    "phone_number": "081234567820",
+    "identity_number": "3174072407930020",
+    "identity_type": "KTP",
+    "address": "Jl. Pondok Indah No. 35, Jakarta",
+    "date_of_birth": "1993-07-24"
+  }
+]
