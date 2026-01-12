@@ -81,7 +81,7 @@ DATABASES = {
     'default': dj_database_url.config(
         # Replace this with your local DB for development if needed, 
         # but typically you rely on the DATABASE_URL env var.
-        default=os.getenv('DATABASE_URL', 'sqlite:///db.sqlite3'),
+        default=os.environ.get('DATABASE_URL'),
         
         # Recommended settings for Vercel + Neon
         conn_max_age=600,    # Keep connections alive for reuse
