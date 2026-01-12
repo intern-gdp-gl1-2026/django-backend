@@ -1,12 +1,11 @@
 """
-User Schemas (Simplified)
+User Schemas - Request/Response Contracts
 """
 from ninja import Schema
 from uuid import UUID
-from datetime import datetime
 
 
-# ==================== REQUEST ====================
+# ========== REQUEST ==========
 
 class RegisterRequest(Schema):
     username: str
@@ -18,12 +17,11 @@ class LoginRequest(Schema):
     password: str
 
 
-# ==================== RESPONSE ====================
+# ========== RESPONSE ==========
 
 class UserResponse(Schema):
     id: UUID
     username: str
-    created_at: datetime
 
 
 class MessageResponse(Schema):

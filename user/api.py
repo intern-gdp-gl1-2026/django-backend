@@ -1,5 +1,5 @@
 """
-User API Endpoints (Simplified)
+User API - HTTP Endpoints
 """
 from ninja import Router
 from uuid import UUID

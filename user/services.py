@@ -1,5 +1,5 @@
 """
-User Application Services (Simplified)
+User Service - Business Logic Layer
 """
 from typing import Optional, List
 from uuid import UUID
@@ -8,7 +8,7 @@ from user.models import User
 
 
 class UserService:
-    """User business operations."""
+    """Handles all user business operations."""
     
     @staticmethod
     def register(username: str, password: str) -> User:
@@ -28,7 +28,7 @@ class UserService:
         except User.DoesNotExist:
             raise ValueError("Invalid username or password")
         
-        if not user.verify_password(password):
+        if not user.check_password(password):
             raise ValueError("Invalid username or password")
         
         return user
