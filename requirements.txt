@@ -1,0 +1,14 @@
+# Web Framework
+Django==6.0.1
+django-ninja==1.5.3
+
+# Deployment & Serverless Support
+gunicorn==23.0.0
+whitenoise==6.8.2
+
+# Database Utilities (Postgres recommended for Vercel)
+dj-database-url==3.1.0
+psycopg2-binary==2.9.10
+
+# Environment Management
+django-environ==0.12.0
