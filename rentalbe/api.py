@@ -7,6 +7,7 @@ Each domain (user, vehicle, reservation) has its own router.
 from ninja import NinjaAPI
 
 from user.api import router as user_router
+from vehicle.api import router as vehicle_router
 
 # Create the main API instance
 api = NinjaAPI(
@@ -20,8 +21,10 @@ api = NinjaAPI(
 # User domain endpoints
 api.add_router("/users", user_router)
 
+# Vehicle domain endpoints
+api.add_router("/vehicles", vehicle_router)
+
 # TODO: Add more routers as you implement them
-# api.add_router("/vehicles", vehicle_router)
 # api.add_router("/reservations", reservation_router)
 
 
